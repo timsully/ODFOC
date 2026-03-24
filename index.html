@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Oregon Detention Facility Oversight Commission — Initiative 2026-081. Learn why independent oversight matters and send your sponsorship support by email." />
+  <title>Oregon Detention Facility Oversight — Initiative 2026-081</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f0e8;
+      --bg-deep: #e8e2d4;
+      --ink: #1a2332;
+      --muted: #4a5568;
+      --accent: #c45c3e;
+      --accent-hover: #a84a32;
+      --rim: rgba(26, 35, 50, 0.12);
+      --card: #fdfbf7;
+      --glow: rgba(196, 92, 62, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: "Literata", Georgia, serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(196, 92, 62, 0.08), transparent 55%),
+        radial-gradient(ellipse 80% 50% at 100% 50%, rgba(26, 35, 50, 0.04), transparent 50%);
+    }
+
+    h1, h2, h3 {
+      font-family: "Syne", system-ui, sans-serif;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .wrap {
+      width: min(72rem, 92vw);
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
+
+    header {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rim);
+      background: rgba(244, 240, 232, 0.85);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    header .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand:hover {
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+    }
+
+    nav a {
+      font-family: "Syne", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: clamp(3rem, 8vw, 5.5rem) 0 3rem;
+    }
+
+    .hero-inner {
+      max-width: 38rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: "Syne", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      margin: 0 0 1rem;
+    }
+
+    .hero .lede {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: "Syne", sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.35rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 24px var(--glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--rim);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    section {
+      padding: 3rem 0;
+      border-top: 1px solid var(--rim);
+    }
+
+    section h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin: 0 0 1.5rem;
+      max-width: 20ch;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--rim);
+      border-radius: 8px;
+      padding: 1.5rem 1.5rem 1.35rem;
+      box-shadow: 0 12px 40px rgba(26, 35, 50, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.65rem;
+      color: var(--accent);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bullets li {
+      position: relative;
+      padding-left: 1.35rem;
+      margin-bottom: 0.65rem;
+      color: var(--muted);
+    }
+
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .legal-note {
+      background: var(--bg-deep);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .legal-note strong {
+      color: var(--ink);
+    }
+
+    details.context {
+      margin-top: 1rem;
+      border: 1px solid var(--rim);
+      border-radius: 8px;
+      padding: 0 1.25rem;
+      background: var(--card);
+    }
+
+    details.context summary {
+      font-family: "Syne", sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 1rem 0;
+      list-style: none;
+    }
+
+    details.context summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.context[open] summary {
+      border-bottom: 1px solid var(--rim);
+      margin-bottom: 1rem;
+    }
+
+    .context-inner {
+      padding-bottom: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .context-inner h4 {
+      font-family: "Syne", sans-serif;
+      font-size: 0.85rem;
+      margin: 1rem 0 0.5rem;
+      color: var(--ink);
+    }
+
+    .sign-panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .sign-panel {
+        grid-template-columns: 1fr 1.05fr;
+      }
+    }
+
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--rim);
+      border-radius: 12px;
+      padding: 1.75rem;
+      box-shadow: 0 20px 50px rgba(26, 35, 50, 0.08);
+    }
+
+    label {
+      display: block;
+      font-family: "Syne", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      font: inherit;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--rim);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .checkbox-row input {
+      width: auto;
+      margin: 0.2rem 0 0;
+    }
+
+    .checkbox-row label {
+      font: inherit;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 500;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .form-hint {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      padding: 2.5rem 0 3rem;
+      border-top: 1px solid var(--rim);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#">Initiative 2026-081</a>
+      <nav aria-label="Page">
+        <a href="#summary">Summary</a>
+        <a href="#context">Context</a>
+        <a href="#sign">Add your name</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero wrap">
+      <div class="hero-inner">
+        <span class="tag">Oregon Detention Facility Oversight Commission</span>
+        <h1>Lighting the shadows: independent oversight for human rights</h1>
+        <p class="lede">
+          A citizen-led Oregon measure to create an expert commission with transparency, accountability, and jurisdiction over state, federal, and private detention facilities—including ICE and Border Patrol sites on Oregon soil.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#sign">Support the measure</a>
+          <a class="btn btn-ghost" href="#summary">Read the summary</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="summary" aria-labelledby="summary-heading">
+      <div class="wrap">
+        <h2 id="summary-heading">What your documents say—in plain language</h2>
+        <div class="summary-grid">
+          <article class="card">
+            <h3>The problem</h3>
+            <p>
+              Federal agencies (ICE, CBP) and contractors operate detention and temporary facilities in Oregon with no state oversight. Your materials describe reports of medical neglect, abuse, and harm to people in care—including children in “Tender Care” settings—while evidence can be hard to surface without independent monitors.
+            </p>
+          </article>
+          <article class="card">
+            <h3>The solution</h3>
+            <p>
+              <strong style="color: var(--ink);">Initiative 2026-081</strong> would establish the <strong style="color: var(--ink);">Oregon Detention Facility Oversight Commission</strong>: a three-member, expert body to inspect conditions, publish findings, and route evidence of abuse to appropriate law enforcement or courts.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Who serves</h3>
+            <p>
+              Exactly three roles: a founding chair tied to the chief petitioner’s grassroots leadership; a professional journalist for public, clear reporting; and a licensed medical professional to oversee health and “Tender Care” standards. Vacancies for journalist and medical seats are filled by Governor + Attorney General appointment, or by self-petition with 100 registered-voter signatures.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Scope &amp; transparency</h3>
+            <p>
+              Jurisdiction covers state, federal, and private facilities—processing centers, hold rooms, “Tender Care” sites, and soft-sided structures. Inspections are unannounced, with a mandated live public video feed using real-time blurring to protect privacy and HIPAA-related concerns.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Evidence &amp; funding</h3>
+            <p>
+              When abuse or neglect is found, the commission secures evidence and transfers it to local police, county sheriff, Oregon State Police, or a circuit court judge. Funding comes from oversight fees on facility operators, pursuit of federal reimbursement (including references to 2025 federal legislation in your draft), with a general-fund advance that your text says should be repaid when federal dollars arrive.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Ballot path</h3>
+            <p>
+              Your fact sheet states the campaign needs <strong style="color: var(--ink);">1,000 sponsorship signatures</strong> from <strong style="color: var(--ink);">registered Oregon voters</strong> to move the measure toward review and a possible November public vote. Chief petitioner listed in your sheets: <strong style="color: var(--ink);">Shawn Mauldin</strong>, Salem, OR (A Helping Hand Locksmith).
+            </p>
+          </article>
+        </div>
+
+        <div class="legal-note">
+          <strong>Official signatures are on state forms.</strong>
+          Oregon sponsorship petitions must follow Secretary of State rules: only active Oregon voters may sign; circulators must witness signatures on paper sheets (or use approved e-sheets that include the full initiative text). This website helps supporters <em>organize and email</em> pledges—it does not replace a legal signature line on the state petition.
+        </div>
+      </div>
+    </section>
+
+    <section id="context" aria-labelledby="context-heading">
+      <div class="wrap">
+        <h2 id="context-heading">Why oversight now</h2>
+        <p style="color: var(--muted); max-width: 48rem; margin: 0 0 1rem;">
+          Your “current cases” memo lists examples (news and litigation) alleging misconduct, civil rights suits, deaths in custody, and Congressional access disputes—intended as context, not legal advice. Expand for a short digest aligned with your file.
+        </p>
+
+        <details class="context">
+          <summary>National context from your research (examples only)</summary>
+          <div class="context-inner">
+            <h4>Criminal &amp; individual accountability</h4>
+            <p>Examples noted include a contract officer’s guilty plea in Louisiana (2025), assault sentencing tied to a Texas ICE official (2026), and other agent or contractor cases your memo cites across several states.</p>
+            <h4>Civil rights &amp; conditions</h4>
+            <p>Your notes reference class actions (e.g. Adelanto), Supreme Court allowance of a forced-labor case against GEO, Minnesota’s suit over “Operation Metro Surge,” and California facility litigation clusters.</p>
+            <h4>Deaths &amp; use of force</h4>
+            <p>The memo highlights rising mortality in ICE custody in 2025–2026 and specific fatalities including shootings during enforcement, framed as part of the case for medical expertise on a oversight body.</p>
+            <h4>Oversight &amp; policy</h4>
+            <p>References include litigation over Congressional facility access and a report characterizing large numbers of abuse reports—supporting your initiative’s emphasis on unannounced inspections and public findings.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sign" aria-labelledby="sign-heading">
+      <div class="wrap sign-panel">
+        <div>
+          <h2 id="sign-heading">Add your name — email your support</h2>
+          <p style="color: var(--muted); margin: 0 0 1rem;">
+            Complete the form and click <strong style="color: var(--ink);">Open email to send</strong>. Your mail app will open with a message addressed to the campaign inbox. You can edit the email before sending.
+          </p>
+          <p style="color: var(--muted); margin: 0; font-size: 0.95rem;">
+            Campaign contact: <a href="mailto:ahelpinghandlocksmith@gmail.com">ahelpinghandlocksmith@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="form-card">
+          <form id="pledge-form" novalidate>
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input id="full-name" name="fullName" type="text" autocomplete="name" required placeholder="As you’d like it recorded" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="optional — for follow-up" />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="optional" />
+
+            <label for="residence">City &amp; county (Oregon) <span aria-hidden="true">*</span></label>
+            <input id="residence" name="residence" type="text" autocomplete="address-level2" required placeholder="e.g. Eugene, Lane County" />
+
+            <label for="message">Optional message</label>
+            <textarea id="message" name="message" placeholder="Why you support oversight, or how you’d like to help"></textarea>
+
+            <div class="checkbox-row">
+              <input id="voter" name="voter" type="checkbox" />
+              <label for="voter">I am an active registered voter in Oregon (honor statement; not verified by this site).</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Open email to send</button>
+            <p class="form-hint">
+              If nothing opens, you can email directly:
+              <a href="mailto:ahelpinghandlocksmith@gmail.com?subject=Petition%20Support%20%E2%80%94%20Initiative%202026-081">ahelpinghandlocksmith@gmail.com</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p style="margin: 0;">
+        Initiative <strong>2026-081</strong> — Oregon Detention Facility Oversight Commission. Site content summarizes materials in this repository for public education; statutory text controls.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("pledge-form");
+      var to = "ahelpinghandlocksmith@gmail.com";
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var nameEl = document.getElementById("full-name");
+        var resEl = document.getElementById("residence");
+        if (!nameEl.value.trim() || !resEl.value.trim()) {
+          nameEl.reportValidity();
+          resEl.reportValidity();
+          return;
+        }
+
+        var email = document.getElementById("email").value.trim();
+        var phone = document.getElementById("phone").value.trim();
+        var message = document.getElementById("message").value.trim();
+        var voter = document.getElementById("voter").checked;
+
+        var bodyLines = [
+          "I am writing to record my support for Initiative 2026-081 (Oregon Detention Facility Oversight Commission).",
+          "",
+          "Name: " + nameEl.value.trim(),
+          "City / county: " + resEl.value.trim(),
+          "Email: " + (email || "(not provided)"),
+          "Phone: " + (phone || "(not provided)"),
+          "Oregon registered voter (self-reported): " + (voter ? "Yes" : "No / prefer not to say"),
+          "",
+        ];
+        if (message) {
+          bodyLines.push("Message:", message, "");
+        }
+        bodyLines.push("— Sent via odfloc support page");
+
+        var subject = "Petition support — Initiative 2026-081 — " + nameEl.value.trim();
+        var href =
+          "mailto:" +
+          encodeURIComponent(to) +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(bodyLines.join("\n"));
+
+        window.location.href = href;
+      });
+    })();
+  </script>
+</body>
+</html>
