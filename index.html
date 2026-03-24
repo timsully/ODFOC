@@ -139,7 +139,9 @@
     }
 
     .hero {
-      padding: clamp(3rem, 8vw, 5.5rem) 0 3rem;
+      /* Only vertical padding — horizontal comes from .wrap so mobile keeps side insets */
+      padding-top: clamp(3rem, 8vw, 5.5rem);
+      padding-bottom: 3rem;
     }
 
     .hero-inner {
@@ -529,6 +531,10 @@
 
     /* Mobile layout: comfortable tap targets, no iOS input zoom, notched screens */
     @media (max-width: 720px) {
+      .hero.wrap {
+        padding-inline: max(1.25rem, env(safe-area-inset-left, 0px)) max(1.25rem, env(safe-area-inset-right, 0px));
+      }
+
       .hero .lede {
         font-size: 1.0625rem;
       }
